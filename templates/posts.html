@@ -6,7 +6,7 @@
 
 {% block body %}
 <div class="container mt=5">
-    <h1>Все статьи на сайте</h1>
+    <h1>All articles on the site</h1>
 
     {% if articles|length > 0 %}
         {% for el in articles %}
@@ -14,11 +14,11 @@
             <h2>{{ el.title }}</h2>
             <p>{{ el.intro }}</p>
             <p><b>Дата: {{ el.date.date() }}</b></p>
-            <a href="/posts/{{ el.id }}" class="btn btn-warning">Детальнее</a>
+            <a href="/posts/{{ el.id }}" class="btn btn-warning">More detail</a>
         </div>
         {% endfor %}
     {% else %}
-    <p>У нас еще нет статей на сайте</p>
+    <p>We don't have articles on the site yet</p>
     {% endif %}
 </div>
 {% endblock %}
